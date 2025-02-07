@@ -1,19 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+@import url('https://fonts.cdnfonts.com/css/star-wars');
 
 body {
   margin: 0;
   font-family: 'Exo', sans-serif;
+  background-color: black;
 }
 
 * {
   box-sizing: border-box;
 }
 
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Moves it behind everything */
+  pointer-events: none; /* Prevents interaction issues */
+}
+
 .nav {
-  background-color: #d9d9d9;
   display: flex;
   align-items: center;
   align-items: stretch;
+  font-family: 'Star Wars', sans-serif;
+  height: 6vh;
+  background-color: #d9d9d9;
 }
 
 .home{
@@ -51,13 +65,21 @@ body {
 .content {
   display: flex;
   gap: 2rem;
+  overflow: hidden;
+  height: 94vh;
+}
+
+.content > div {
+  color: white;
 }
 
 .sideBar {
   background-color: #d9d9d9;
-  /* height: 16rem;
-  overflow: scroll;
-  overflow-x: hidden; */
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  min-width: 164px;
 }
 
 .sideBar > ul {
@@ -86,18 +108,39 @@ body {
   background-color: #9fc5e9;
 }
 
-.person {
-  margin-top: 2rem;
-}
-
 .basicPage {
   margin: 2rem 1rem;
+  font-size: 1.5rem;
 }
 
 .attributes {
   display: inline;
 }
 
+.film {
+  padding: 1rem 0;
+}
+
 .filmsList {
   margin: 0;
+}
+
+.content > div a {
+  color: #2e66f7;
+}
+
+.content > div a:visited {
+  color: #eb212d;
+}
+
+.personContainer {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.filmsContent {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
 }

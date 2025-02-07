@@ -10,7 +10,7 @@ export default function App(props) {
     return (
         <>
             <nav className="nav">
-                <NavLink to='/' className='home'>Star Wars</NavLink>
+                <NavLink to='/' className='home'>Star Wars Wiki</NavLink>
                 <ul>
                     <li><NavLink to='/people'>People</NavLink></li>
                     <li><NavLink to='/planets'>Planets</NavLink></li>
@@ -45,7 +45,7 @@ export function PeopleSidebar() {
                     ))}  
                 </ul>
             </aside>
-            <div><Outlet /></div>
+            <div className='personContainer'><Outlet /></div>
         </>
     )
 }
@@ -97,7 +97,7 @@ export function FilmsSidebar() {
                     ))}  
                 </ul>
             </aside>
-            <div><Outlet /></div>
+            <div className='filmsContent'><Outlet /></div>
         </>
     )
 }
