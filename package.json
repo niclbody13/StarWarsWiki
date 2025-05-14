@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "description": "A multi-page application using React Router",
   "type": "module",
+  "homepage": "https://niclbody13.github.io/StarWarsWiki/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
