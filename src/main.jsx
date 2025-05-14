@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import './stars.js'
 
 import App, { People, Planets, Films, Home, ErrorPage, PeopleSidebar, Person, PlanetsSidebar, Planet, FilmsSidebar, Film } from './App'
 
